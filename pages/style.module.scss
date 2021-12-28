@@ -1,0 +1,48 @@
+@import "styles/utils";
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+
+  &::before {
+    position: absolute;
+    content: url("/img/bg-pattern-top.svg");
+
+    left: -410px;
+    top: -358px;
+    width: 622px;
+    height: 621px;
+    z-index: -1;
+
+    @include media(">desktop") {
+      left: -285px;
+      top: -510px;
+      width: 978px;
+      height: 976px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: url("/img/bg-pattern-bottom.svg");
+
+    right: -412px;
+    bottom: -309px;
+    width: 622px;
+    height: 621px;
+    z-index: -1;
+
+    @include media(">desktop") {
+      right: -230px;
+      bottom: -630px;
+      width: 978px;
+      height: 976px;
+    }
+  }
+}
